@@ -18,7 +18,7 @@
 <meta property="og:description" content="局域网：一般称为内网。      交换机：用来组建内网的局域网设备。 简单局域网的构成：交换机、网线、pc      IP范围：0-255">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-17T05:33:37.000Z">
-<meta property="article:modified_time" content="2020-04-17T05:54:18.831Z">
+<meta property="article:modified_time" content="2020-04-17T14:27:23.576Z">
 <meta property="article:author" content="御坂上杉">
 <meta property="article:tag" content="网络安全">
 <meta name="twitter:card" content="summary">
@@ -207,7 +207,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">581字</span>
+      <span class="post-count">825字</span>
     </span>
   </span>
 
@@ -216,7 +216,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">2分</span>
+      <span class="post-count">3分</span>
     </span>
   </span>
 </div>
@@ -234,9 +234,9 @@
 <a id="more"></a>   
 
 <p><strong>子网掩码：</strong>用来确定ip地址的网络位。</p>
-<p>局域网通信·规则：同一个局域网中，所有ip地址必须在同一网段才能互相通信。</p>
+<p><strong>局域网通信·规则：</strong>同一个局域网中，所有ip地址必须在同一网段才能互相通信。</p>
 <p><strong>ip地址构成：</strong>网络位+主机位。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">例如： </span><br><span class="line">   10.1.1.1        255.0.0.0                                                       </span><br><span class="line">   获知 10.1.1.1网络属于10.网段 名字叫.1.1.1  </span><br><span class="line">      </span><br><span class="line">   10.1.1.1        255.255.0.0</span><br><span class="line">   获知 10.1.1.1网络属于10.1网段 名字叫.1.1</span><br><span class="line"></span><br><span class="line">   10.1.1.1  255.255.255.0</span><br><span class="line">   获知 10.1.1.1网络属于10.1.1网段 名字叫.1                 </span><br><span class="line">  </span><br><span class="line">  一个ip地址必需配备子网掩码。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">例如： </span><br><span class="line">   10.1.1.1        255.0.0.0                                                       </span><br><span class="line">   获知 10.1.1.1网络属于10.网段 名字叫.1.1.1  </span><br><span class="line">      </span><br><span class="line">   10.1.1.1        255.255.0.0</span><br><span class="line">   获知 10.1.1.1网络属于10.1网段 名字叫.1.1</span><br><span class="line"></span><br><span class="line">   10.1.1.1  255.255.255.0</span><br><span class="line">   获知 10.1.1.1网络属于10.1.1网段 名字叫.1                 </span><br><span class="line">  </span><br><span class="line">   一个ip地址必需配备子网掩码。</span><br></pre></td></tr></table></figure>
 
 
 
@@ -246,14 +246,30 @@
 <p><strong>C 192——223       子网：255.255.255.0</strong>          </p>
 <p><strong>D 224——239       组播地址   255.255.255.255 全局广播地址</strong></p>
 <p> <strong>E 240——254      科研专用    x.x.x.255 该网段的广播地址</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">注：</span><br><span class="line">        1.  目前我们可以使用的只有A、B、C  3类</span><br><span class="line"></span><br><span class="line">        2.  ABC类的子网掩码可以修改</span><br></pre></td></tr></table></figure>
+
+
+
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">例1：10.1.1.1   255.255.255.0   问10.1.1.1属于哪个网段  所在网段有多少个可用ip地址 广播地址是什么？</span><br><span class="line"></span><br><span class="line">答：10.1.1.1属于10.1.1.0网段， </span><br><span class="line">   10.1.1.0可用ip地址为10.1.1.1——10.1.1.254                       </span><br><span class="line">   10.1.1.0广播地址为10.1.1.255</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">例2：10.1.1.1   255.255.0.0  问10.1.1.1属于哪个网段    所在网段有多少个可用ip地址  广播地址是什么？</span><br><span class="line"></span><br><span class="line">答：10.1.1.1属于10.1.0.0网段，   </span><br><span class="line">   10.1.0.0可用ip地址为10.1.0.1——10.1.255.254（65534）             </span><br><span class="line">   10.1.1.0广播地址为10.1.255.255</span><br></pre></td></tr></table></figure>
 
-<p><strong>总结：当主机全部为0代表网段，主机位全为255代表该网段广播地址。</strong>（127特殊地址：127.0.0.1 回送地址）</p>
+<p><strong>总结：当主机全部为0代表网段，主机位全为255代表该网段广播地址。</strong>（127特殊地址：127.0.0.1 回环地址）</p>
 <p><strong>网关：</strong>一个网络的出口。 一般在路由器上，没有网关上不了外网。只能局域网通信。</p>
-<p><strong>路由器</strong>：可用链接外网的设备。</p>
-<p><strong>pc向外发包：</strong>1.首先判断目标ip地址是否在同一网段。</p>
-<p>​                       2.如在同一网段内，则直接发出去，而不找网关。</p>
-<p>​                       3.如果不在，则直接发给网关。</p>
+<p><strong>路由器</strong>：可用链接外网的设备。        可用连接内外网的设备  网段的第一个IP或最后一个，也可以随意设置<br>               想要访问互联网,必须要知道网关</p>
+<p>*<em>Tips:PC向外发包: *</em> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.首先判断目标ip地址是否在同一网段。</span><br><span class="line">2.如在同一网段内，则直接发出去，而不找网关。 </span><br><span class="line">3.如果不在，则直接发给网关。</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>DNS:</strong>     Domaim Name Service  域名服务</p>
+<p>*<em>当你访问一个域名时: *</em>   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.找缓存</span><br><span class="line">2.找本地解析文件</span><br><span class="line">3.请求DNS解析服务</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>ping 命令 (测试网络连通性):</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ping 目标主机			 # 测试</span><br><span class="line">ping -t 目标主机		 # 一直ping，直到按下ctrl+c                                             ping -n 数字 目标主机   # 修改ping包数量</span><br><span class="line">ping -l 数字 目标主机	# 修改ping包大小</span><br><span class="line"></span><br><span class="line">注意:如果ping不通,可能对方不在线,或者对方开着防火墙!</span><br><span class="line">如果ping通，对方也可能开着防火墙，只不过可以ping</span><br><span class="line"></span><br><span class="line">ipconfig (查看IP地址)    ipconfig &#x2F;all	(查看IP地址和DNS)</span><br></pre></td></tr></table></figure>
+
+<p>手工解析域名:   cmd命令行下执行    nslookup +域名</p>
 
     
 
