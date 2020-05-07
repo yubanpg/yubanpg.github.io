@@ -18,7 +18,7 @@
 <meta property="og:description" content="局域网：一般称为内网。      交换机：用来组建内网的局域网设备。 简单局域网的构成：交换机、网线、pc      IP范围：0-255">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-17T05:33:37.000Z">
-<meta property="article:modified_time" content="2020-04-17T14:27:23.576Z">
+<meta property="article:modified_time" content="2020-04-20T06:14:03.999Z">
 <meta property="article:author" content="御坂上杉">
 <meta property="article:tag" content="网络安全">
 <meta name="twitter:card" content="summary">
@@ -207,7 +207,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">825字</span>
+      <span class="post-count">1.2k字</span>
     </span>
   </span>
 
@@ -216,7 +216,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">3分</span>
+      <span class="post-count">4分</span>
     </span>
   </span>
 </div>
@@ -267,9 +267,30 @@
 
 
 <p><strong>ping 命令 (测试网络连通性):</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ping 目标主机			 # 测试</span><br><span class="line">ping -t 目标主机		 # 一直ping，直到按下ctrl+c                                             ping -n 数字 目标主机   # 修改ping包数量</span><br><span class="line">ping -l 数字 目标主机	# 修改ping包大小</span><br><span class="line"></span><br><span class="line">注意:如果ping不通,可能对方不在线,或者对方开着防火墙!</span><br><span class="line">如果ping通，对方也可能开着防火墙，只不过可以ping</span><br><span class="line"></span><br><span class="line">ipconfig (查看IP地址)    ipconfig &#x2F;all	(查看IP地址和DNS)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ping 目标主机			 #测试网络连通性，有去有回即为可以成功通路</span><br><span class="line">ping -t 目标主机		 # 一直ping，直到按下ctrl+c                                             ping -n 数字 目标主机   # 修改ping包数量</span><br><span class="line">ping -l 数字 目标主机	# 修改ping包大小</span><br><span class="line"></span><br><span class="line">注意:如果ping不通,可能对方不在线,或者对方开着防火墙!</span><br><span class="line">如果ping通，对方也可能开着防火墙，只不过可以ping</span><br><span class="line"></span><br><span class="line">ipconfig (查看IP地址)    ipconfig &#x2F;all	(查看IP地址和DNS)</span><br></pre></td></tr></table></figure>
 
-<p>手工解析域名:   cmd命令行下执行    nslookup +域名</p>
+
+
+<p><strong>手工解析域名:</strong>   cmd命令行下执行    nslookup +域名</p>
+<p><strong>DOS命令</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">cd..               返回上级目录</span><br><span class="line"></span><br><span class="line">cd\                返回根目录</span><br><span class="line"></span><br><span class="line">d:                 进入D盘</span><br><span class="line"></span><br><span class="line">cls                清空所有dos操作</span><br><span class="line"></span><br><span class="line">dir                显示当前盘符文件信息</span><br><span class="line"></span><br><span class="line">rd . &#x2F;s&#x2F;q          清空磁盘</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>浏览文件</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">type 文件名.扩展名                 显示</span><br><span class="line"></span><br><span class="line">type 文件名.扩展名 |more           分页显示</span><br><span class="line"></span><br><span class="line">例如：dir c:\windows |more</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>创建文件</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1  echo</span><br><span class="line"></span><br><span class="line">2  copy con 文件名.扩展名</span><br><span class="line"></span><br><span class="line">开始编写内容</span><br><span class="line"></span><br><span class="line">ctrl+z      回车结束编写</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>删除文件</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">del *.txt                  删除所有txt结尾的文件</span><br><span class="line"></span><br><span class="line">del *.*                    删除文件</span><br><span class="line"></span><br><span class="line">del *.* &#x2F;s&#x2F;q               无提示删除</span><br><span class="line"></span><br><span class="line">md 文件名                   创建文件夹</span><br><span class="line"></span><br><span class="line">attrib +h 文件名            隐藏文件夹</span><br><span class="line"></span><br><span class="line">attrib -h 文件名            取消隐藏文件夹</span><br><span class="line"></span><br><span class="line">attrib +h +s +a 文件名      将文件夹隐藏设为系统文件</span><br><span class="line"></span><br><span class="line">dir &#x2F;a                     显示当前磁盘所有包括系统文件</span><br><span class="line"></span><br><span class="line">快速生成一个空文件（有大小）</span><br><span class="line"></span><br><span class="line">fsutil file createnew c:\system.ini 数字       在c盘创建文件指定文件大小</span><br><span class="line"></span><br><span class="line">修改关联</span><br><span class="line"></span><br><span class="line">assoc .txt&#x3D;exefile         修改打开txt文件的程序 使其无法打开</span><br><span class="line"></span><br><span class="line">assoc .txt&#x3D;txtfile         恢复</span><br><span class="line"></span><br><span class="line">shutdown</span><br><span class="line"></span><br><span class="line">shutdown -s -t 100 定时关机</span><br><span class="line"></span><br><span class="line">shutdown -s -f -t 100 定时强制关机</span><br><span class="line"></span><br><span class="line">shutdown -r -t 秒 定时重启</span><br><span class="line"></span><br><span class="line">shutdown -a 取消定时</span><br><span class="line"></span><br><span class="line">shutdown -l 注销，同logoff命令相同</span><br><span class="line"></span><br><span class="line">shutdown -s -f -t 100 -c &quot;haah&quot;</span><br><span class="line"></span><br><span class="line">ren 旧名 新名               重命名</span><br><span class="line"></span><br><span class="line">move 原地址 新地址           移动</span><br><span class="line"></span><br><span class="line">copy 原地址 目的地址         复制粘贴</span><br></pre></td></tr></table></figure>
+
+
 
     
 
@@ -406,6 +427,20 @@
   </div>
 </article>
 
+
+<nav id="article-nav">
+  
+    <a href="/2020/05/07/%E6%B2%89%E7%A0%82/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          沉砂
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
 
 <aside class="wrap-side-operation">
@@ -547,6 +582,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">网络安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">纪录</a>
               </li>
             
             <div class="clearfix"></div>
