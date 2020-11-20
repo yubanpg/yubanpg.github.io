@@ -18,7 +18,7 @@
 <meta property="og:description" content="局域网：一般称为内网。      交换机：用来组建内网的局域网设备。 简单局域网的构成：交换机、网线、pc      IP范围：0-255">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-17T05:33:37.000Z">
-<meta property="article:modified_time" content="2020-11-20T11:49:27.269Z">
+<meta property="article:modified_time" content="2020-11-20T11:55:23.993Z">
 <meta property="article:author" content="御坂上杉">
 <meta property="article:tag" content="网络安全">
 <meta name="twitter:card" content="summary">
@@ -207,7 +207,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">844字</span>
+      <span class="post-count">749字</span>
     </span>
   </span>
 
@@ -236,62 +236,38 @@
 <p><strong>子网掩码：</strong>用来确定ip地址的网络位。</p>
 <p><strong>局域网通信·规则：</strong>同一个局域网中，所有ip地址必须在同一网段才能互相通信。</p>
 <p><strong>ip地址构成：</strong>网络位+主机位。</p>
-<blockquote>
-<pre><code>&amp;nbsp; 例如： 
-    10.1.1.1        255.0.0.0                                                       
-
-    获知 10.1.1.1网络属于10.网段 名字叫.1.1.1       
-
-    10.1.1.1        255.255.0.0
-    获知 10.1.1.1网络属于10.1网段 名字叫.1.1
-
-    10.1.1.1  255.255.255.0
-    获知 10.1.1.1网络属于10.1.1网段 名字叫.1                 
-
-    一个ip地址必需配备子网掩码。</code></pre></blockquote>
 <p><strong>ISO定义地址分类：五大类</strong>     （是以ip地址第一位进行区分的）</p>
 <p><strong>A  0——126          子网：255.0.0.0</strong>                     </p>
 <p><strong>B 128——191       子网：255.255.0.0</strong></p>
 <p><strong>C 192——223       子网：255.255.255.0</strong>          </p>
 <p><strong>D 224——239       组播地址   255.255.255.255 全局广播地址</strong></p>
 <p> <strong>E 240——254      科研专用    x.x.x.255 该网段的广播地址</strong></p>
-<blockquote>
 <p>​            注：</p>
 <p>​                1.目前我们可以使用的只有A、B、C  3类</p>
 <p>​                2.  ABC类的子网掩码可以修改</p>
-</blockquote>
-<blockquote>
 <p>​        例1：10.1.1.1   255.255.255.0   问10.1.1.1属于哪个网段  所在网段有多少个可用ip地址 广播地址是什么？</p>
 <p>​          答：  10.1.1.1属于10.1.1.0网段， </p>
-<pre><code>10.1.1.0可用ip地址为10.1.1.1——10.1.1.254                       
-
-10.1.1.0广播地址为10.1.1.255</code></pre><p>​        例2：10.1.1.1   255.255.0.0  问10.1.1.1属于哪个网段    所在网段有多少个可用ip地址  广播地址是什么？</p>
-<p>​               答：10.1.1.1属于10.1.0.0网段，   </p>
-<pre><code>10.1.0.0可用ip地址为10.1.0.1——10.1.255.254（65534）             
-
-10.1.1.0广播地址为10.1.255.255</code></pre></blockquote>
+<p>​                   10.1.1.0可用ip地址为10.1.1.1——10.1.1.254                       </p>
+<p>​                   10.1.1.0广播地址为10.1.1.255</p>
+<p>​        例2：10.1.1.1   255.255.0.0  问10.1.1.1属于哪个网段    所在网段有多少个可用ip地址  广播地址是什么？</p>
+<p>​                  答：10.1.1.1属于10.1.0.0网段，   </p>
+<p>​                         10.1.0.0可用ip地址为10.1.0.1——10.1.255.254（65534）             </p>
+<p>​                         10.1.1.0广播地址为10.1.255.255</p>
 <p><strong>总结：当主机全部为0代表网段，主机位全为255代表该网段广播地址。</strong>（127特殊地址：127.0.0.1 回环地址）</p>
 <p><strong>网关：</strong>一个网络的出口。 一般在路由器上，没有网关上不了外网。只能局域网通信。</p>
 <p><strong>路由器</strong>：可用链接外网的设备。        可用连接内外网的设备  网段的第一个IP或最后一个，也可以随意设置<br>               想要访问互联网,必须要知道网关</p>
 <p>*<em>Tips:PC向外发包: *</em> </p>
-<blockquote>
 <p>​                    1.首先判断目标ip地址是否在同一网段。<br>​                    2.如在同一网段内，则直接发出去，而不找网关。<br>​                    3.如果不在，则直接发给网关。</p>
-</blockquote>
 <p><strong>DNS:</strong>     Domaim Name Service  域名服务</p>
 <p>*<em>当你访问一个域名时: *</em>   </p>
-<blockquote>
 <p>​                         1.找缓存<br>​                         2.找本地解析文件<br>​                         3.请求DNS解析服务</p>
-</blockquote>
 <p><strong>ping 命令 (测试网络连通性):</strong></p>
-<blockquote>
-<pre><code>ping 目标主机             #测试网络连通性，有去有回即为可以成功通路
-
-ping -t 目标主机         # 一直ping，直到按下ctrl+c</code></pre><p>​                          ping -n 数字 目标主机   # 修改ping包数量                         </p>
-<p>​                          ping -l 数字 目标主机    # 修改ping包大小</p>
-<pre><code>注意:如果ping不通,可能对方不在线,或者对方开着防火墙!
-如果ping通，对方也可能开着防火墙，只不过可以ping
-
-ipconfig (查看IP地址)    ipconfig /all    (查看IP地址和DNS)</code></pre></blockquote>
+<p>​                     ping 目标主机             #测试网络连通性，有去有回即为可以成功通路</p>
+<p>​                     ping -t 目标主机         # 一直ping，直到按下ctrl+c</p>
+<p>​                     ping -n 数字 目标主机   # 修改ping包数量                         </p>
+<p>​                     ping -l 数字 目标主机    # 修改ping包大小</p>
+<p>​                     注意:如果ping不通,可能对方不在线,或者对方开着防火墙!<br>​                             如果ping通，对方也可能开着防火墙，只不过可以ping</p>
+<p>​                     ipconfig (查看IP地址)    ipconfig /all    (查看IP地址和DNS)</p>
 <p><strong>手工解析域名:</strong>   cmd命令行下执行    nslookup +域名</p>
 
     
